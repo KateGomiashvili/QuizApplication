@@ -4,7 +4,7 @@
     "Name": "testquiz1",
     "Questions": [
       {
-        "Text": "q1",
+        "Text": "Edited QuestionText",
         "Answers": [
           "a",
           "a",
@@ -52,6 +52,62 @@
           "e"
         ],
         "CorrectAnswer": 1
+      }
+    ]
+  },
+  {
+    "Author": "Keti",
+    "Name": "new test quiz",
+    "Questions": [
+      {
+        "Text": "Q1",
+        "Answers": [
+          "A1",
+          "A1",
+          "A",
+          "A4"
+        ],
+        "CorrectAnswer": 1
+      },
+      {
+        "Text": "Q2",
+        "Answers": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "CorrectAnswer": 1
+      },
+      {
+        "Text": "Q3",
+        "Answers": [
+          "ANS1",
+          "ANS2",
+          "ANS3",
+          "ANS4"
+        ],
+        "CorrectAnswer": 2
+      },
+      {
+        "Text": "Q4",
+        "Answers": [
+          "ANS1",
+          "ANS2",
+          "ANS3",
+          "ANS4"
+        ],
+        "CorrectAnswer": 1
+      },
+      {
+        "Text": "Q5",
+        "Answers": [
+          "ANS1",
+          "ANS2",
+          "ANS3",
+          "ANS4"
+        ],
+        "CorrectAnswer": 2
       }
     ]
   }

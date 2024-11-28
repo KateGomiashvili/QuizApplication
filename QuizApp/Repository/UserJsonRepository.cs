@@ -32,25 +32,6 @@ namespace QuizApp.Repository
                 return true;
             } else { return false; }
         }
-        //public void SignIn(string userName, string password)
-        //{
-        //    if (!_users.Any(x => x.UserName == userName))
-        //    {
-        //        Console.WriteLine("User not found.");
-        //    }
-        //    else
-        //    {
-        //        User currentUser = _users.FirstOrDefault(acc => acc.UserName == userName);
-        //        if (currentUser.Password != password)
-        //        {
-        //            Console.WriteLine("Incorrect Password");
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine($"Welcome {userName}");
-        //        }
-        //    }
-        //}
 
         public bool SignIn(string userName, string password)
         {
@@ -126,36 +107,6 @@ namespace QuizApp.Repository
                 return new List<User>();
             }
         }
-        public delegate byte[] ShowQuizDelegate(Quiz quiz);
-
-        //public int QuizScore(Quiz currentQuiz, Func<Quiz, byte[]> userAnswers, User currentUser)
-        //{
-        //    int score = 0;
-        //    byte[] answers = userAnswers(currentQuiz);
-        //    for (int i = 0; i < 5; i++)
-        //    {
-        //        if (currentQuiz.CorrectAnswers[i] == answers[i])
-        //        {
-        //            score += 20;
-        //        }
-        //        else
-        //        {
-        //            score -= 20;
-        //        }
-        //    }
-        //    var userInfo = _users.FirstOrDefault(u => u.UserName == currentUser.UserName);
-        //    if (userInfo != null)
-        //    {
-        //        userInfo.Score += score;
-        //        SaveData();
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine($"User with ID {currentUser.UserName} not found.");
-        //    }
-        //    SaveData();
-        //    return score;
-        //}
 
     }
 }

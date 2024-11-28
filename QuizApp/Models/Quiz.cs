@@ -13,10 +13,6 @@ namespace QuizApp.Models
 
         public Quiz(string author, string name, List<Question> questions)
         {
-            //if (questions.Count != 5)
-            //{
-            //    throw new ArgumentException("A quiz must have exactly 5 questions.");
-            //}
 
             foreach (var question in questions)
             {
@@ -48,25 +44,6 @@ namespace QuizApp.Models
             }
         }
 
-        // Method to validate an answer for a specific questio
-
-        // Override ToString for display
-        //public override string ToString()
-        //{
-        //    var quizDetails = new StringBuilder();
-        //    quizDetails.AppendLine($"Quiz: {Name} by {Author}");
-
-        //    for (int i = 0; i < Questions.Count; i++)
-        //    {
-        //        quizDetails.AppendLine($"Question {i + 1}: {Questions[i].Text}");
-        //        for (int j = 0; j < Questions[i].Answers.Length; j++)
-        //        {
-        //            quizDetails.AppendLine($"{j + 1}: {Questions[i].Answers[j]}");
-        //        }
-        //    }
-
-        //    return quizDetails.ToString();
-        //}
         
     }
 }
