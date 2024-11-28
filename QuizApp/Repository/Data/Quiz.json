@@ -1,55 +1,58 @@
 [
   {
-    "UserId": 1,
-    "Author": "Keti",
-    "Name": "Nature",
+    "Author": "Ketevan",
+    "Name": "testquiz1",
     "Questions": [
       {
-        "Text": "What is the largest mammal on Earth?",
+        "Text": "q1",
         "Answers": [
-          "Elephant",
-          "Blue Whale",
-          "Giraffe",
-          "Hippopotamus"
-        ]
+          "a",
+          "a",
+          "a",
+          "a"
+        ],
+        "CorrectAnswer": 1
       },
       {
-        "Text": "What process do plants use to make food?",
+        "Text": "q2",
         "Answers": [
-          "Respiration",
-          "Digestion",
-          "Photosynthesis",
-          "Fermentation"
-        ]
+          "b",
+          "b",
+          "b",
+          "b"
+        ],
+        "CorrectAnswer": 2
       },
       {
-        "Text": "Which layer of Earth is made up of tectonic plates?",
+        "Text": "q3",
         "Answers": [
-          "Mantle",
-          "Crust",
-          "Core",
-          "Outer Core"
-        ]
+          "c",
+          "c",
+          "c",
+          "c"
+        ],
+        "CorrectAnswer": 1
       },
       {
-        "Text": "Which of these is not a type of cloud?",
+        "Text": "q4",
         "Answers": [
-          "Cumulus",
-          "Stratus",
-          "Cirrus",
-          "Nimbus"
-        ]
+          "d",
+          "d",
+          "d",
+          "d"
+        ],
+        "CorrectAnswer": 1
       },
       {
-        "Text": "What is the chemical symbol for water?",
+        "Text": "q5",
         "Answers": [
-          "H2O",
-          "O2",
-          "CO2",
-          "H2"
-        ]
+          "e",
+          "e",
+          "e",
+          "e"
+        ],
+        "CorrectAnswer": 1
       }
-    ],
-    "CorrectAnswers": "AQIBAwA="
+    ]
   }
 ]

@@ -16,25 +16,72 @@ namespace QuizApp.Repository
             _users = LoadData();
         }
         public List<User> GetUsers() => _users;
-        public void SignIn(string userName, string password)
+        public User GetUser(string username)
         {
-            if (!_users.Any(x => x.UserName == userName))
+            var user = _users.FirstOrDefault(u => u.UserName==username);
+            if (user == null)
             {
-                Console.WriteLine("User not found. Try again.");
+                Console.WriteLine("User not found.");
             }
-            else
-            {
-                User currentUser = _users.FirstOrDefault(acc => acc.UserName == userName);
-                if (currentUser.Password != password)
-                {
-                    Console.WriteLine("Incorrect Password");
-                }
-                else
-                {
-                    Console.WriteLine($"Welcome {userName}");
-                }
-            }
+            return user;
         }
+        public bool UserExists(string userName)
+        {
+            if (_users.Any(x => x.UserName == userName))
+            {
+                return true;
+            } else { return false; }
+        }
+        //public void SignIn(string userName, string password)
+        //{
+        //    if (!_users.Any(x => x.UserName == userName))
+        //    {
+        //        Console.WriteLine("User not found.");
+        //    }
+        //    else
+        //    {
+        //        User currentUser = _users.FirstOrDefault(acc => acc.UserName == userName);
+        //        if (currentUser.Password != password)
+        //        {
+        //            Console.WriteLine("Incorrect Password");
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine($"Welcome {userName}");
+        //        }
+        //    }
+        //}
+
+        public bool SignIn(string userName, string password)
+        {
+            // Validate input
+            if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(password))
+            {
+                Console.WriteLine("Username and password cannot be empty.");
+                return false;
+            }
+
+            // Fetch the user
+            User currentUser = _users.FirstOrDefault(acc => acc.UserName == userName);
+
+            if (currentUser == null)
+            {
+                Console.WriteLine("User not found.");
+                return false;
+            }
+
+            // Check password
+            if (currentUser.Password != password)
+            {
+                Console.WriteLine("Incorrect Password.");
+                return false;
+            }
+
+            // Successful sign-in
+            Console.WriteLine($"Welcome {userName}!");
+            return true;
+        }
+
         public void RegisterNewUser(User user)
         {
             if (!_users.Any(x => x.UserName == user.UserName))
@@ -81,34 +128,34 @@ namespace QuizApp.Repository
         }
         public delegate byte[] ShowQuizDelegate(Quiz quiz);
 
-        public int QuizScore(Quiz currentQuiz, Func<Quiz, byte[]> userAnswers, User currentUser)
-        {
-            int score = 0;
-            byte[] answers = userAnswers(currentQuiz);
-            for (int i = 0; i < 5; i++)
-            {
-                if (currentQuiz.CorrectAnswers[i] == answers[i])
-                {
-                    score += 20;
-                }
-                else
-                {
-                    score -= 20;
-                }
-            }
-            var userInfo = _users.FirstOrDefault(u => u.UserName == currentUser.UserName);
-            if (userInfo != null)
-            {
-                userInfo.Score += score;
-                SaveData();
-            }
-            else
-            {
-                Console.WriteLine($"User with ID {currentUser.UserName} not found.");
-            }
-            SaveData();
-            return score;
-        }
+        //public int QuizScore(Quiz currentQuiz, Func<Quiz, byte[]> userAnswers, User currentUser)
+        //{
+        //    int score = 0;
+        //    byte[] answers = userAnswers(currentQuiz);
+        //    for (int i = 0; i < 5; i++)
+        //    {
+        //        if (currentQuiz.CorrectAnswers[i] == answers[i])
+        //        {
+        //            score += 20;
+        //        }
+        //        else
+        //        {
+        //            score -= 20;
+        //        }
+        //    }
+        //    var userInfo = _users.FirstOrDefault(u => u.UserName == currentUser.UserName);
+        //    if (userInfo != null)
+        //    {
+        //        userInfo.Score += score;
+        //        SaveData();
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"User with ID {currentUser.UserName} not found.");
+        //    }
+        //    SaveData();
+        //    return score;
+        //}
 
     }
 }

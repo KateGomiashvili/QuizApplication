@@ -6,14 +6,12 @@ namespace QuizApp.Models
 {
     public class Quiz
     {
-        public int UserId { get; set; }
         public string Author { get; set; }
         public string Name { get; set; }
         public List<Question> Questions { get; set; }
-        public byte[] CorrectAnswers { get; set; }
 
 
-        public Quiz(int id, string author, string name, List<Question> questions, byte[] correctAnswers)
+        public Quiz(string author, string name, List<Question> questions)
         {
             //if (questions.Count != 5)
             //{
@@ -27,18 +25,17 @@ namespace QuizApp.Models
                     throw new ArgumentException("Each question must have exactly 4 possible answers.");
                 }
             }
-            UserId = id;
             Author = author;
             Name = name;
             Questions = questions;
-            CorrectAnswers = correctAnswers;
         }
         public class Question
         {
             public string Text { get; set; }
             public string[] Answers { get; set; }
+            public byte CorrectAnswer { get; set; }
 
-            public Question(string text, string[] answers)
+            public Question(string text, string[] answers, byte correctAnswer)
             {
                 if (answers.Length != 4)
                 {
@@ -47,29 +44,29 @@ namespace QuizApp.Models
 
                 Text = text;
                 Answers = answers;
-                
+                CorrectAnswer = correctAnswer;
             }
         }
 
         // Method to validate an answer for a specific questio
 
         // Override ToString for display
-        public override string ToString()
-        {
-            var quizDetails = new StringBuilder();
-            quizDetails.AppendLine($"Quiz: {Name} by {Author}");
+        //public override string ToString()
+        //{
+        //    var quizDetails = new StringBuilder();
+        //    quizDetails.AppendLine($"Quiz: {Name} by {Author}");
 
-            for (int i = 0; i < Questions.Count; i++)
-            {
-                quizDetails.AppendLine($"Question {i + 1}: {Questions[i].Text}");
-                for (int j = 0; j < Questions[i].Answers.Length; j++)
-                {
-                    quizDetails.AppendLine($"{j + 1}: {Questions[i].Answers[j]}");
-                }
-            }
+        //    for (int i = 0; i < Questions.Count; i++)
+        //    {
+        //        quizDetails.AppendLine($"Question {i + 1}: {Questions[i].Text}");
+        //        for (int j = 0; j < Questions[i].Answers.Length; j++)
+        //        {
+        //            quizDetails.AppendLine($"{j + 1}: {Questions[i].Answers[j]}");
+        //        }
+        //    }
 
-            return quizDetails.ToString();
-        }
+        //    return quizDetails.ToString();
+        //}
         
     }
 }

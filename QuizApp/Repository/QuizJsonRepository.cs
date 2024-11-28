@@ -24,7 +24,7 @@ namespace QuizApp.Repository
                 _quizzes.Add(quiz);
                 SaveData();
             }
-            else Console.WriteLine($"Quiz with such Name already exists.");
+            else Console.WriteLine("Quiz with such Name already exists.");
         }
         public void SaveData()
         {
@@ -49,31 +49,7 @@ namespace QuizApp.Repository
                 { return new List<Quiz>(); }
             }
         }
-        public byte[] ShowQuiz(Quiz quiz)
-        {
-            List<byte> answerArr = new List<byte>();
-            foreach (var question in quiz.Questions)
-            {
-                Console.WriteLine($"{question.Text}");
-                for (var i=1; i<5; i++)
-                {
-                    Console.WriteLine($"{i}) {question.Answers[i-1]}");
-                }
-                Console.WriteLine("Enter Your Answer");
-                string input = Console.ReadLine();
-
-                if (byte.TryParse(input, out byte userAnswer) && userAnswer >= 0 && userAnswer <= 3)
-                {
-                    answerArr.Add(userAnswer);
-                }
-                else
-                {
-                    Console.WriteLine("Invalid input. Please enter a number between 0 and 3.");
-                }
-            }
-            return answerArr.ToArray();
-            
-        }
+        
 
     }
 }
