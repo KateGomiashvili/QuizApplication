@@ -16,6 +16,15 @@ namespace QuizApp.Repository
             _users = LoadData();
         }
         public List<User> GetUsers() => _users;
+        public void GetTopUsers()
+        {
+            List<User> topUsers =  _users.OrderByDescending(user => user.Score).Take(10).ToList();
+            Console.WriteLine("--TOP USERS--");
+            foreach (var user in topUsers) {
+                Console.WriteLine(user.UserName);
+            }
+            Console.WriteLine("----");
+        }
         public User GetUser(string username)
         {
             var user = _users.FirstOrDefault(u => u.UserName==username);
@@ -35,14 +44,11 @@ namespace QuizApp.Repository
 
         public bool SignIn(string userName, string password)
         {
-            // Validate input
             if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(password))
             {
                 Console.WriteLine("Username and password cannot be empty.");
                 return false;
             }
-
-            // Fetch the user
             User currentUser = _users.FirstOrDefault(acc => acc.UserName == userName);
 
             if (currentUser == null)
@@ -50,15 +56,10 @@ namespace QuizApp.Repository
                 Console.WriteLine("User not found.");
                 return false;
             }
-
-            // Check password
             if (currentUser.Password != password)
             {
-                Console.WriteLine("Incorrect Password.");
                 return false;
             }
-
-            // Successful sign-in
             Console.WriteLine($"Welcome {userName}!");
             return true;
         }
@@ -76,7 +77,7 @@ namespace QuizApp.Repository
         {
             var json = JsonSerializer.Serialize(_users, new JsonSerializerOptions { WriteIndented = true });
 
-            using (var writer = new StreamWriter(_filePath, false)) // Overwrite the file
+            using (var writer = new StreamWriter(_filePath, false)) 
             {
                 writer.Write(json);
             }

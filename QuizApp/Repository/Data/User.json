@@ -12,7 +12,7 @@
   {
     "UserName": "Ketevan",
     "Password": "asdasd",
-    "Score": 20
+    "Score": 40
   },
   {
     "UserName": "Giorgi",
@@ -23,5 +23,40 @@
     "UserName": "elene",
     "Password": "123456",
     "Score": 0
+  },
+  {
+    "UserName": "user1",
+    "Password": "asdasd",
+    "Score": 30
+  },
+  {
+    "UserName": "user2",
+    "Password": "asdasd",
+    "Score": 360
+  },
+  {
+    "UserName": "user3",
+    "Password": "asdasd",
+    "Score": 200
+  },
+  {
+    "UserName": "user4",
+    "Password": "asdasd",
+    "Score": 60
+  },
+  {
+    "UserName": "user5",
+    "Password": "asdasd",
+    "Score": 160
+  },
+  {
+    "UserName": "user6",
+    "Password": "asdasd",
+    "Score": 80
+  },
+  {
+    "UserName": "user7",
+    "Password": "asdasd",
+    "Score": 280
   }
 ]

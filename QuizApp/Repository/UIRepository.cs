@@ -16,18 +16,19 @@ namespace QuizApp.Repository
 
             do
             {
-                Console.WriteLine("Welcome! Enter R to register a new user, S to Sign In, or X to Exit:");
-                sign = Console.ReadLine()?.ToUpper();
+                Console.WriteLine("Welcome! Choose 1 for SignUp, 2 for SignIn, or X to Exit:");
+                sign = Console.ReadLine();
 
-                if (sign == "R")
+                if (sign == "1")
                 {
                     User newUser = SignUpFunction();
-                    Actions(newUser);
+                    if (newUser != null) { Actions(newUser); }
+
                 }
-                else if (sign == "S")
+                else if (sign == "2")
                 {
                     User newUser = SignInFunction();
-                    Actions(newUser);
+                    if (newUser != null) { Actions(newUser); }
                 }
                 else if (sign != "X")
                 {
@@ -48,7 +49,7 @@ namespace QuizApp.Repository
             {
                 EditQuiz(currentUser);
             }
-            else if(choice=="3") 
+            else if (choice == "3")
             {
                 quizRep.GetQuizzesByAuthor(currentUser.UserName);
                 Console.WriteLine("Choose Quiz and enter its Name:");

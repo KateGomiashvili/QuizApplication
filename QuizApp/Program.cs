@@ -10,6 +10,7 @@ namespace QuizApp
             QuizJsonRepository quizRep = new QuizJsonRepository(@"../../../Repository/Data/Quiz.json");
             UserJsonRepository userRep = new UserJsonRepository(@"../../../Repository/Data/User.json");
             UIRepository Ui = new UIRepository();
+            userRep.GetTopUsers();
             Ui.Autorization();
         }
     }
