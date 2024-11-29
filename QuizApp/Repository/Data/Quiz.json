@@ -112,62 +112,6 @@
     ]
   },
   {
-    "Author": "Ketevan",
-    "Name": "Math",
-    "Questions": [
-      {
-        "Text": "2\u002B2 ?",
-        "Answers": [
-          "1",
-          "2",
-          "3",
-          "4"
-        ],
-        "CorrectAnswer": 4
-      },
-      {
-        "Text": "8/4 ?",
-        "Answers": [
-          "1",
-          "2",
-          "3",
-          "4"
-        ],
-        "CorrectAnswer": 2
-      },
-      {
-        "Text": "0*3 ?",
-        "Answers": [
-          "3",
-          "1",
-          "0",
-          "4"
-        ],
-        "CorrectAnswer": 3
-      },
-      {
-        "Text": "4*5 ? ",
-        "Answers": [
-          "10",
-          "20",
-          "14",
-          "12"
-        ],
-        "CorrectAnswer": 2
-      },
-      {
-        "Text": "3*4 ?",
-        "Answers": [
-          "1",
-          "2",
-          "12",
-          "14"
-        ],
-        "CorrectAnswer": 3
-      }
-    ]
-  },
-  {
     "Author": "testuser",
     "Name": "testquiz2",
     "Questions": [
@@ -225,62 +169,6 @@
   },
   {
     "Author": "levan",
-    "Name": "kitxvari",
-    "Questions": [
-      {
-        "Text": "ramdeni feri uyvars",
-        "Answers": [
-          "sami",
-          "ori",
-          "erti",
-          "xuti"
-        ],
-        "CorrectAnswer": 1
-      },
-      {
-        "Text": "me miyvars chemi",
-        "Answers": [
-          "ubani",
-          "saxli",
-          "kari",
-          "gardabani"
-        ],
-        "CorrectAnswer": 1
-      },
-      {
-        "Text": "ra feri giyvars",
-        "Answers": [
-          "shavi",
-          "mwvane",
-          "lurji",
-          "iasamnisferi"
-        ],
-        "CorrectAnswer": 1
-      },
-      {
-        "Text": "jonis uyvars",
-        "Answers": [
-          "gartoba",
-          "tamashi",
-          "cekva",
-          "xtunva"
-        ],
-        "CorrectAnswer": 2
-      },
-      {
-        "Text": "sdasd",
-        "Answers": [
-          "asd",
-          "asd",
-          "asd",
-          "asd"
-        ],
-        "CorrectAnswer": 1
-      }
-    ]
-  },
-  {
-    "Author": "levan",
     "Name": "",
     "Questions": [
       {
@@ -330,6 +218,62 @@
           "s",
           "s",
           "s"
+        ],
+        "CorrectAnswer": 1
+      }
+    ]
+  },
+  {
+    "Author": "Ketevan",
+    "Name": "testquiz",
+    "Questions": [
+      {
+        "Text": "new question",
+        "Answers": [
+          "ans1",
+          "ans2",
+          "ans3",
+          "ans4"
+        ],
+        "CorrectAnswer": 1
+      },
+      {
+        "Text": "question2",
+        "Answers": [
+          "ans1",
+          "ans2",
+          "ans3",
+          "ans4"
+        ],
+        "CorrectAnswer": 1
+      },
+      {
+        "Text": "question3",
+        "Answers": [
+          "ans1",
+          "ans2",
+          "ans3",
+          "ans4"
+        ],
+        "CorrectAnswer": 2
+      },
+      {
+        "Text": "question4",
+        "Answers": [
+          "ans1",
+          "ans2",
+          "ans3",
+          "ans4"
+        ],
+        "CorrectAnswer": 1
+      },
+      {
+        "Text": "question5",
+        "Answers": [
+          "ans1",
+          "ans2",
+          "ans3",
+          "ans4"
         ],
         "CorrectAnswer": 1
       }
