@@ -12,7 +12,7 @@
   {
     "UserName": "Ketevan",
     "Password": "asdasd",
-    "Score": 40
+    "Score": 60
   },
   {
     "UserName": "Giorgi",
@@ -58,5 +58,10 @@
     "UserName": "user7",
     "Password": "asdasd",
     "Score": 280
+  },
+  {
+    "UserName": "testuser",
+    "Password": "testpassword",
+    "Score": 0
   }
 ]

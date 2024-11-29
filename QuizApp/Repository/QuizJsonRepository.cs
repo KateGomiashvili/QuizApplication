@@ -17,7 +17,9 @@ namespace QuizApp.Repository
         }
         public List<Quiz> GetQuizzes() => _quizzes;
         public Quiz GetQuiz(string quizName) => _quizzes.FirstOrDefault(acc => acc.Name == quizName);
-        public List<Quiz> GetQuizzesByAuthor(string author)
+        public List<Quiz> GetQuizzesByAuthor(string author) => _quizzes.Where(x=> x.Author == author).ToList();
+        
+        public List<Quiz> GetQuizzesByAnotherAuthor(string author)
         {
             List<Quiz> quizzes = new List<Quiz>();
             foreach (var quiz in _quizzes)
@@ -28,15 +30,13 @@ namespace QuizApp.Repository
                 }
             }
             if (quizzes.Count > 0)
-                Console.WriteLine("Here Quizzes by another Users:");
+                Console.WriteLine("here quizzes by another users:");
             {
-                foreach (var quiz in quizzes)
-                {
-                    Console.WriteLine($"{quiz.Name}");
-                }
+                
                 return quizzes;
             }
         }
+
         public void CreateNewQuiz(Quiz quiz)
         {
             if (!_quizzes.Any(x => x.Name == quiz.Name))
@@ -46,6 +46,17 @@ namespace QuizApp.Repository
             }
             else Console.WriteLine("Quiz with such Name already exists.");
         }
+        public void DeleteQuiz(string quizName)
+        {
+            var quiz = _quizzes.FirstOrDefault(q => q.Name == quizName);
+
+            if (quiz != null)
+            {
+                _quizzes.Remove(quiz);
+                SaveData(); 
+            }
+        }
+
         public void SaveData()
         {
 

@@ -14,6 +14,7 @@ namespace QuizApp.Models
         public string UserName { get; set; }
         public string Password { get; set; }
         public int Score { get; set; } = 0;
+        public User() { }
         public User( string username, string password)
         {
             UserName = username;
