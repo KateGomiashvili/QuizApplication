@@ -19,23 +19,7 @@ namespace QuizApp.Repository
         public Quiz GetQuiz(string quizName) => _quizzes.FirstOrDefault(acc => acc.Name == quizName);
         public List<Quiz> GetQuizzesByAuthor(string author) => _quizzes.Where(x=> x.Author == author).ToList();
         
-        public List<Quiz> GetQuizzesByAnotherAuthor(string author)
-        {
-            List<Quiz> quizzes = new List<Quiz>();
-            foreach (var quiz in _quizzes)
-            {
-                if (quiz.Author != author)
-                {
-                    quizzes.Add(quiz);
-                }
-            }
-            if (quizzes.Count > 0)
-                Console.WriteLine("here quizzes by another users:");
-            {
-                
-                return quizzes;
-            }
-        }
+        
 
         public void CreateNewQuiz(Quiz quiz)
         {

@@ -63,5 +63,10 @@
     "UserName": "testuser",
     "Password": "testpassword",
     "Score": 0
+  },
+  {
+    "UserName": "levan",
+    "Password": "852654as",
+    "Score": 0
   }
 ]
